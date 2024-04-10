@@ -18,7 +18,11 @@ section {
 }
 
 footer {
-    color:rgb(115, 49, 122);
+    color:rgb(209, 103, 220);
     text-align: center;
     font-style: italic;
+}
+
+footer > p {
+    font-size: 1.3em;
 }
