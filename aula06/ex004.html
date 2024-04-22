@@ -13,9 +13,13 @@
 <body>
     
     <script>
+        var dinheiro =  Number(window.prompt('Qual o seu salário?'))
+        var gato = window.prompt('Qual o nome do seu gato?')
         var nome = window.prompt('Qual é seu nome?')
         document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`)
-        document.write(`Seu nome em maiúsulas é ${nome.toUpperCase()}`)
+        document.write(`Seu nome em maiúsulas é ${nome.toUpperCase()} <br/>`)
+        document.write(`Seu gato em letras MAIÚSUCULAS é ${gato.toUpperCase()}, e em letras mínusculas é ${gato.toLowerCase()}<br/>`)
+        document.write(`Vou passar na sua casa essa noite pra pegar uns ${dinheiro.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
     </script>
 </body>
 </html>
