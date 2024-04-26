@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom V2</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            position: relative;
+            background-color: grey;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        div#area {
+            background-color: grey;
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+     <main id="space" onmousedown="segurou()" onmouseup="soltou()">
+        <div id="area" onmousedown="segurou()"     onmouseup="soltou()">segure...</div>
+    </main>
+    <script>
+        function segurou() {
+            var b = window.document.querySelector ('main#space')
+            b.style.background = "blue"
+            var a = window.document.querySelector('div#area')
+            a.innerHTML = "agora..SOLTE!"
+            a.style.background = 'blue'
+            a.style.color = "white"
+            a.style.textAlign = "center"
+            a.style.fontSize = "2em"
+            a.style.position = "relative"
+        }
+
+        function soltou() {
+            var b = window.document.querySelector ('main#space')
+            b.style.background = "black"
+            var a = window.document.querySelector('div#area')
+            a.innerHTML = "Parabéns pelos 18 anos!"
+            a.style.background = 'black'
+            a.style.color = "white"
+            a.style.textAlign = "center"
+            a.style.fontSize = "2em"
+            a.style.position = "relative"
+        }
+
+    </script>
+</body>
+</html>
