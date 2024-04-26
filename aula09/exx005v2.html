@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Ná Prática</title>
+</head>
+<body>
+    <h1>Mexendo com o Dom Na prática</h1>
+    <p>esta tag será azul</p>
+    <p id="paragrafo">essa vermelha</p>
+    <footer id="cabeçario">este é um footer, ele tem o fundo verde</footer>
+    <script>
+        var azul = window.document.getElementsByTagName('p')[0]
+        azul.style.color = 'blue'
+        var vermelho = window.document.getElementById('paragrafo')
+        vermelho.style.color = "red"
+        var verde = window.document.querySelector('footer#cabeçario')
+        verde.style.background = 'green'
+        verde.style.color = "white"
+        var corpo = window.document.getElementsByTagName('body') [0]
+        corpo.style.background = "yellow"
+    </script>
+</body>
+</html>
