@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora pog com java script</title>
+    <style>
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando E múltiplicando</h1>
+    <label for="soma1">Somar</label>
+    <input type="number" name="somma" id="soma1">
+
+    <label for="soma2">com</label>
+    <input type="number" name="somma" id="soma2">
+
+    <input type="button" value="Somar" onclick="somar()">
+
+
+
+    <div id="inputSoma"></div>
+
+    <label for="multi1">Calcular</label>
+    <input type="number" name="multi" id="multi1">
+
+    <label for="soma2">com</label>
+    <input type="number" name="multi" id="multi2">
+
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+
+
+
+    <div id="inputMulti"></div>
+
+    <label for="divi1">Calcular</label>
+    <input type="number" name="multi" id="divi1">
+
+    <label for="divi2">com</label>
+    <input type="number" name="multi" id="divi2">
+
+    <input type="button" value="Dividir" onclick="dividir()">
+
+    <div id="inputDivi"></div>
+    
+    <script>
+        function somar() {
+            var n1 = window.document.getElementById('soma1')
+            var n2 = window.document.getElementById('soma2')
+            var res = window.document.getElementById('inputSoma')
+            var somar1 = Number(n1.value)
+            var somar2 = Number(n2.value)
+            var s = somar1 + somar2
+            res.innerHTML = `O resultado da SOMA é ${s}`
+        }
+
+        function multiplicar() {
+            var n3 = window.document.getElementById('multi1')
+            var n4 = window.document.getElementById('multi2')
+            var res2 = window.document.getElementById('inputMulti')
+            var multiplicar1 = Number(n3.value)
+            var multiplicar2 = Number(n4.value)
+            var s2 = multiplicar1 * multiplicar2
+            res2.innerHTML = `O resultado da MULTIPLICAÇÃO é ${s2}`
+        }
+
+        function dividir() {
+            var n3 = window.document.getElementById('divi1')
+            var n4 = window.document.getElementById('divi2')
+            var res2 = window.document.getElementById('inputDivi')
+            var multiplicar1 = Number(n3.value)
+            var multiplicar2 = Number(n4.value)
+            var s2 = multiplicar1 / multiplicar2
+            res2.innerHTML = `O resultado da DIVISÃO é ${s2}`
+        }
+    </script>
+</body>
+</html>
