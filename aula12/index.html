@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste com condições</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quantas Insígnias você tem?</h1>
+    <p>preencha abaixo o número de ínsignias que você tem no Pokémon Fire red/Leaf green: <input type="number" name="ínsigna" id="ins"></p>
+    <div id="res"></div>
+    <input type="submit" value="Verificar" onclick="clicar()">
+    <script>
+        function clicar() {
+            var badges = window.document.getElementById('ins')
+            var trainer = Number(badges.value)
+            var res = window.document.getElementById('res')
+            if (trainer < 1) {
+                res.innerHTML = `Você coletou nenhuma insígnia ainda!!!`
+            } else if (trainer < 2) {
+                res.innerHTML = `Você coletou ${trainer} insígnia, a da pedra`
+            } else if (trainer < 3) {
+                res.innerHTML = `Você coletou ${trainer} insígnias, a da pedra e água`
+            } else if (trainer < 4) {
+                res.innerHTML = `Você coletou ${trainer} insígnias, a da pedra, água e elétrica`
+            } else if (trainer < 5) {
+                res.innerHTML = `Você coletou ${trainer} insígnias, pedra,água,elétrica e grama`
+            } else if (trainer < 6) {
+                res.innerHTML = `Você coletou ${trainer} insígnias, pedra,água,elétrica,grama e veneno`
+            } else if (trainer < 7) {
+                res.innerHTML = `Você coletou ${trainer} insígnias, pedra,água,elétrica,grama,veneno e psicaca`
+            } else if (trainer < 8) {
+                res.innerHTML = `Você coletou ${trainer} insígnias, pedra,água,elétrica,grama,veneno,psicaca e de fogo`
+            } else if (trainer < 9) {
+                res.innerHTML = `Parabéns, você coletou todas as ${trainer} insígnias`
+            } else if (trainer >= 9) {
+                res.innerHTML = `Resultado inválido`
+            }
+        }
+    </script>
+</body>
+</html>
