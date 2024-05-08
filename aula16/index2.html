@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Soma de números</title>
+    <style>
+        body {
+            background-color: rgb(70, 142, 236);
+            font: normal 15pt Arial;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.323);
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            font: italic;
+            padding-top: 10px;
+        }
+
+        #foto {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Soma de números</h1>
+    <section>
+        <p>1° número: <input type="number" name="txtnum" id="txt1"></p>
+        <p>2° número: <input type="number" name="txtnum" id="txt2"></p>
+        <input type="button" value="Somar" onclick="verificarSomar()">
+        <div id="res"></div>
+    </section>
+    <footer>&copy; MatheusMarques</footer>
+    <script>
+        function somar(n1=0, n2=0) {
+            return n1 + n2
+        }
+
+        function verificarSomar() {
+            var num1 = Number(window.document.getElementById('txt1').value)
+            var num2 = Number(window.document.getElementById('txt2').value)
+            var resultado = somar(num1, num2)
+            document.getElementById('res').innerText = "O resultado da soma é " + resultado + "."
+        }
+    </script>
 </body>
 </html>
