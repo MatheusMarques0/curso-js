@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício parimp</title>
+    <style>
+        body {
+            background-color: rgb(70, 142, 236);
+            font: normal 15pt Arial;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.323);
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            font: italic;
+            padding-top: 10px;
+        }
+
+        #foto {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>É par ou ímpar?</h1>
+    <section>
+        <p>número: <input type="number" name="txtnu" id="txtnum"></p>
+        <input type="button" value="Verificar" onclick="verificarParOuImpar()">
+        <div id="res"></div>
+    </section>
+    <footer>&copy; MatheusMarques</footer>
+    <script>
+        function parimp (n) {
+            if (n % 2 == 0) {
+                return 'par'
+            } else {
+                return 'ímpar'
+            }
+        }
+
+        function verificarParOuImpar() {
+            var num = document.getElementById('txtnum').value
+            var resultado = parimp(num)
+            document.getElementById('res').innerText = "o número é " + resultado + "."
+        }
+    </script>
+</body>
+</html>
